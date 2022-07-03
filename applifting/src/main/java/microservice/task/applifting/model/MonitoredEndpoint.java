@@ -26,15 +26,22 @@ public class MonitoredEndpoint extends AbstractID {
 
     }
 
-//    @Override
-//    public String toString() {
-//        return "{" +
-//                "name: \"" + name + "\"," +
-//                "url: \"" + url + "\"," +
-//                "dateOfCreation: \"" + dateOfCreation + "\"," +
-//                "dateOfLastCheck: \"" + dateOfLastCheck + "\"," +
-//                "monitoredInterval: \"" + monitoredInterval + "\"," +
-//                "owner: \"" + owner + "\"" +
-//                "}";
-//    }
+    public MonitoredEndpoint(String name, String url, User owner) {
+        this();
+        this.name = name;
+        this.url = url;
+        this.owner = owner;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "name: \"" + name + "\"," +
+                "url: \"" + url + "\"," +
+                "dateOfCreation: \"" + dateOfCreation + "\"," +
+                "dateOfLastCheck: \"" + dateOfLastCheck + "\"," +
+                "monitoredInterval: \"" + monitoredInterval + "\"," +
+                "owner: \"" + owner + "\"" +
+                "}";
+    }
 }

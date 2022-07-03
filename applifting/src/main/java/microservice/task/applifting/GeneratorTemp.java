@@ -26,23 +26,12 @@ public class GeneratorTemp {
 
     // --- MEP (MonitoredEndpoint) ---
     public MonitoredEndpoint createMEP(String name, String url, User owner) {
-        Date dateOfCreation = new Date(), dateOfLastCheck = new Date(), monitoredInterval = new Date();
         et = em.getTransaction();
         et.begin();
-        MonitoredEndpoint mep = new MonitoredEndpoint();
-        mep.setName(name);
-        mep.setUrl(url);
-        mep.setOwner(owner);
+        MonitoredEndpoint mep = new MonitoredEndpoint(name, url, owner);
+        mep.setDateOfCreation(new Timestamp(System.currentTimeMillis()));
         em.persist(mep);
         et.commit();
-        System.out.println("{" +
-                "name: \"" + name + "\"," +
-                "url: \"" + url + "\"," +
-                "dateOfCreation: \"" + dateOfCreation.getDate() + "\"," +
-                "dateOfLastCheck: \"" + dateOfLastCheck.getDate() + "\"," +
-                "monitoredInterval: \"" + monitoredInterval.getTime() + "\"," +
-                "owner: \"" + owner + "\"" +
-                "}");
         return mep;
     }
 
@@ -82,22 +71,13 @@ public class GeneratorTemp {
     }
 
     // --- MR (MonitoringResult) ---
-    public MonitoringResult createMR(Integer returnedHttp, String returnedPayload, MonitoredEndpoint monitoredEPId) {
-        Timestamp dateOfCheck = new Timestamp(System.currentTimeMillis());
+    public MonitoringResult createMR(String returnedPayload, MonitoredEndpoint monitoredEPId) {
         et = em.getTransaction();
         et.begin();
-        MonitoringResult mr = new MonitoringResult();
-        mr.setReturnedHttpStatusCode(returnedHttp);
-        mr.setReturnedPayload(returnedPayload);
-        mr.setMonitoredEndpointId(monitoredEPId);
+        MonitoringResult mr = new MonitoringResult(returnedPayload, monitoredEPId);
+        mr.setDateOfCheck(new Timestamp(System.currentTimeMillis()));
         em.persist(mr);
         et.commit();
-        System.out.println("{" +
-                "dateOfCheck: \"" + dateOfCheck + "\"," +
-                "returnedHttpStatusCode: \"" + returnedHttp + "\"," +
-                "returnedPayload: " + returnedPayload + "\"," +
-                "monitoredEndpointId: " + monitoredEPId + "\"" +
-                "}");
         return mr;
     }
 

@@ -1,5 +1,6 @@
 package microservice.task.applifting;
 
+import microservice.task.applifting.model.MonitoredEndpoint;
 import microservice.task.applifting.model.MonitoringResult;
 import microservice.task.applifting.model.User;
 import org.slf4j.Logger;
@@ -29,5 +30,17 @@ public class AppliftingApplication implements CommandLineRunner {
         User user2 = new User("Batman", "batman@example.com");
         user2.setAccessToken(uuid.toString());
         // continue user here...
+
+        MonitoredEndpoint monitoredEndpoint1 = new GeneratorTemp().createMEP("", "", user1);
+        // continue monitoredEndpoint1 here...
+
+        MonitoredEndpoint monitoredEndpoint2 = new GeneratorTemp().createMEP("", "", user2);
+        // continue monitoredEndpoint2 here...
+
+        MonitoringResult monitoringResult1 = new MonitoringResult("", monitoredEndpoint1);
+        // continue monitoringResult1 here...
+
+        MonitoringResult monitoringResult2 = new MonitoringResult("", monitoredEndpoint2);
+        // continue monitoringResult2 here
     }
 }

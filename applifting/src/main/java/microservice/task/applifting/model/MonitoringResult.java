@@ -22,11 +22,20 @@ public class MonitoringResult extends AbstractID {
 
     }
 
-//    public MonitoringResult(Timestamp dateOfCheck,Integer returnedHttp,
-//                            String returnedPayload, MonitoredEndpoint monitoredEPId) {
-//        this.dateOfCheck = dateOfCheck;
-//        this.returnedHttpStatusCode = returnedHttp;
-//        this.returnedPayload = returnedPayload;
-//        this.monitoredEndpointId = monitoredEPId;
-//    }
+    public MonitoringResult(String returnedPayload, MonitoredEndpoint monitoredEPId) {
+        this();
+        this.returnedPayload = returnedPayload;
+        this.monitoredEndpointId = monitoredEPId;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "dateOfCheck: \"" + dateOfCheck + "\"," +
+                "returnedHttpStatusCode: \"" + returnedHttpStatusCode + "\"," +
+                "returnedPayload: " + returnedPayload + "\"," +
+                "monitoredEndpointId: " + monitoredEndpointId + "\"" +
+                "}";
+    }
+
 }
