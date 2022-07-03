@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"microservice.task.applifting","c":"AppliftingApplication","l":"AppliftingApplication()","u":"%3Cinit%3E()"},{"p":"microservice.task.applifting","c":"DAOGenerator","l":"DAOGenerator()","u":"%3Cinit%3E()"},{"p":"microservice.task.applifting","c":"AppliftingApplication","l":"main(String[])","u":"main(java.lang.String[])"}];updateSearchResults();

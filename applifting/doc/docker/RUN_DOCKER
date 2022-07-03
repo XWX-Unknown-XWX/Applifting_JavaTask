@@ -1,0 +1,10 @@
+Shutting Down & Cleaning Up
+
+Run docker-compose up again and you’ll be right where you left off.
+
+Run (docker-compose down) afterwards and your container should be shut down.
+
+If you want a fresh start for everything, run (docker system prune -a) and (docker volume prune).
+The first command removes any unused containers and the second removes any unused volumes.
+
+I recommend doing this fairly often since Docker likes to stash everything away causing the gigabytes to add up.
