@@ -10,6 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 public class AppliftingApplication implements CommandLineRunner {
@@ -32,15 +33,17 @@ public class AppliftingApplication implements CommandLineRunner {
         // continue user here...
 
         MonitoredEndpoint monitoredEndpoint1 = new GeneratorTemp().createMEP("", "", user1);
+        monitoredEndpoint1.setMonitoredInterval((int) TimeUnit.MINUTES.toSeconds(8));
         // continue monitoredEndpoint1 here...
 
         MonitoredEndpoint monitoredEndpoint2 = new GeneratorTemp().createMEP("", "", user2);
+        monitoredEndpoint2.setMonitoredInterval((int) TimeUnit.MINUTES.toSeconds(8));
         // continue monitoredEndpoint2 here...
 
-        MonitoringResult monitoringResult1 = new MonitoringResult("", monitoredEndpoint1);
+        MonitoringResult monitoringResult1 = new GeneratorTemp().createMR("", monitoredEndpoint1);
         // continue monitoringResult1 here...
 
-        MonitoringResult monitoringResult2 = new MonitoringResult("", monitoredEndpoint2);
+        MonitoringResult monitoringResult2 = new GeneratorTemp().createMR("", monitoredEndpoint2);
         // continue monitoringResult2 here
     }
 }
