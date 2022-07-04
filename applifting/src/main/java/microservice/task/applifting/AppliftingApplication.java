@@ -26,11 +26,14 @@ public class AppliftingApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
         log.info("AppliftingApplication...");
+
         User user1 = new User("Applifting", "info@applifting.cz");
         user1.setAccessToken(uuid.toString());
+        // continue user1 here...
+
         User user2 = new User("Batman", "batman@example.com");
         user2.setAccessToken(uuid.toString());
-        // continue user here...
+        // continue user2 here...
 
         MonitoredEndpoint monitoredEndpoint1 = new GeneratorTemp().createMEP("", "", user1);
         monitoredEndpoint1.setMonitoredInterval((int) TimeUnit.MINUTES.toSeconds(8));
