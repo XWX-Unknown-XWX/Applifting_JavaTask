@@ -8,8 +8,6 @@ import java.util.List;
 
 public interface MonitoredEpRep extends CrudRepository<MonitoredEndpoint, Long> {
 
-    List<MonitoredEndpoint> findByUrl(String url);
-
     List<MonitoredEndpoint> findByIdIn(Collection<Integer> id);
 
     boolean existsAllByIdIn(Collection<Integer> id);

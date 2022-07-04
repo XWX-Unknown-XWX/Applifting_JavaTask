@@ -8,6 +8,11 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "MonitoredEndpoint")
+@NamedQueries({
+        @NamedQuery(
+                name = "MonitoredEndpoint.findByIdIn",
+                query = "SELECT m FROM MonitoredEndpoint m WHERE m.id = :id"
+        ),})
 @Getter
 @Setter
 public class MonitoredEndpoint extends AbstractID {
