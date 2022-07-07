@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"microservice.task.applifting","l":"AppliftingApplication"},{"p":"microservice.task.applifting","l":"DAOGenerator"}];updateSearchResults();
