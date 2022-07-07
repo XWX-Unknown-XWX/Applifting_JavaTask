@@ -9,7 +9,7 @@
    
     At the moment, the program does not work because of errors in the process of    
     implementation. Work on the project is temporarily suspended and may be resumed  
-    in the future... 😞
+    in the future. 😞
 
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 ### This is UML diagram of SpringBoot project ([Powered by IntelliJ Ultimate](https://www.jetbrains.com/help/idea/class-diagram.html)):
