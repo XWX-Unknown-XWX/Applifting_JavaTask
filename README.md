@@ -22,6 +22,6 @@ This assignment was very interesting and entertaining for me, but since it was m
 
 I was able to use my knowledge of Java and MySQL, connect my program to the Docker container, and use the MySQLWorkbench application. 
 
-At this point, the Microservice application is not completely complete and I hope that once I have fully explored SpringBoot, I can return to this project and finish it. 
+At this point, the Microservice application is not completely finished and I hope that once I have fully explored SpringBoot, I can return to this project and finish it. 
 
 Thank you for your attention and I hope to be able to get in touch with you in the future! 🙂
